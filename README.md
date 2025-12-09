@@ -2,7 +2,7 @@
 
 A modern, responsive Single Page Application (SPA) built for a local PC building and repair business in Split, Croatia.
 
-**Live Demo:** [pc-service.netlify.app]
+**Live Demo:** [https://ivopc.netlify.app](https://ivopc.netlify.app)
 
 ![Project Status](https://img.shields.io/badge/Status-Active-success)
 ![License](https://img.shields.io/badge/License-MIT-blue)
@@ -38,34 +38,51 @@ If you want to run this project locally on your machine:
 ### Installation
 
 1. Clone the repository
-   git clone [https://github.com/ID993/pc-service.git](https://github.com/ID993/pc-service.git)
+
+   ```bash
+   git clone https://github.com/ID993/pc-service.git
+   ```
+
 2. Enter the directory
+
+   ```bash
    cd pc-service
-3. npm install
-4. npm run dev
+   ```
 
-📂 Project Structure
+3. Install dependencies
 
+   ```bash
+   npm install
+   ```
+
+4. Run the development server
+   ```bash
+   npm run dev
+   ```
+
+## 📂 Project Structure
+
+```text
 src/
-├── components/ # Reusable UI blocks (Hero, Navbar, etc.)
-├── App.tsx # Main application layout
-├── main.tsx # Entry point
-└── index.css # Tailwind directives and global styles
+├── components/      # Reusable UI blocks (Hero, Navbar, etc.)
+├── App.tsx          # Main application layout
+├── main.tsx         # Entry point
+└── index.css        # Tailwind directives and global styles
+```
 
-🔮 Future Improvements
+## 🔮 Future Improvements
 
-[ ] Connect Contact Form to EmailJS or Netlify Forms.
+- [x] Connect Contact Form to Netlify Forms.
+- [ ] Add a "Gallery" page with photos of completed builds.
+- [ ] Add Dark/Light mode toggle.
+- [ ] Internationalization (Croatian/English support).
 
-[ ] Add a "Gallery" page with photos of completed builds.
+## 👤 Author
 
-[ ] Add Dark/Light mode toggle.
+**Ivo** - _Software Engineer & PC Enthusiast_
 
-[ ] Internationalization (Croatian/English support).
+- GitHub: [@ID993](https://github.com/ID993)
 
-👤 Author
+---
 
-Ivo - Software Engineer & PC Enthusiast
-
-GitHub: @ID993
-
-Built with passion in Fedora Linux. 🐧
+_Built with passion in Fedora Linux._ 🐧
