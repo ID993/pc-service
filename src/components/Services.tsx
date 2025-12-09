@@ -1,4 +1,3 @@
-import React from 'react';
 import { Wrench, Zap, Cpu } from 'lucide-react';
 
 const services = [

@@ -1,5 +1,4 @@
-import React from 'react';
-import { Heart, Globe, Award } from 'lucide-react';
+import { Heart, Globe } from 'lucide-react';
 
 const About = () => {
   return (
