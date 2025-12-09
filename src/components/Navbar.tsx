@@ -10,7 +10,7 @@ const Navbar = () => {
           <a href="#" className="flex items-center gap-2 group">
             <Cpu className="text-blue-500 w-6 h-6 group-hover:text-blue-400 transition-colors" />
             <span className="text-xl font-bold text-white tracking-wider group-hover:text-blue-100 transition-colors">
-              TurboPC
+              IvoPC
             </span>
           </a>
 

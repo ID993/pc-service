@@ -1,73 +1,71 @@
-# React + TypeScript + Vite
+# IvoPC - Custom PC Building Services 🖥️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive Single Page Application (SPA) built for a local PC building and repair business in Split, Croatia.
 
-Currently, two official plugins are available:
+**Live Demo:** [pc-service.netlify.app]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Project Status](https://img.shields.io/badge/Status-Active-success)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-## React Compiler
+## 📖 About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project serves as the digital storefront for IvoPC. It allows clients to:
 
-## Expanding the ESLint configuration
+- View available services (Assembly, Repairs, Cleaning).
+- Read about the builder's philosophy.
+- Contact the business for quotes (Frontend UI).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+It was built from scratch to demonstrate modern frontend development practices, component-based architecture, and responsive design.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Framework:** React 18
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Build Tool:** Vite
+- **Icons:** Lucide React
+- **Deployment:** Netlify (CI/CD connected to GitHub)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+If you want to run this project locally on your machine:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Node.js (v18 or higher)
+- npm
+
+### Installation
+
+1. Clone the repository
+   git clone [https://github.com/ID993/pc-service.git](https://github.com/ID993/pc-service.git)
+2. Enter the directory
+   cd pc-service
+3. npm install
+4. npm run dev
+
+📂 Project Structure
+
+src/
+├── components/ # Reusable UI blocks (Hero, Navbar, etc.)
+├── App.tsx # Main application layout
+├── main.tsx # Entry point
+└── index.css # Tailwind directives and global styles
+
+🔮 Future Improvements
+
+[ ] Connect Contact Form to EmailJS or Netlify Forms.
+
+[ ] Add a "Gallery" page with photos of completed builds.
+
+[ ] Add Dark/Light mode toggle.
+
+[ ] Internationalization (Croatian/English support).
+
+👤 Author
+
+Ivo - Software Engineer & PC Enthusiast
+
+GitHub: @ID993
+
+Built with passion in Fedora Linux. 🐧

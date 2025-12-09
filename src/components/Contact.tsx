@@ -1,6 +1,36 @@
-import { Mail, MapPin, Send } from 'lucide-react';
+import { useState, type FormEvent } from 'react';
+import { Mail, MapPin, Send, CheckCircle, Loader2 } from 'lucide-react';
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      
+      setIsSubmitted(true);
+      setIsSubmitting(false);
+    } catch (error) {
+      console.error(error);
+      setIsSubmitting(false);
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <section id="contact" className="bg-slate-900 py-24 relative border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,7 +54,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-white font-medium">Email</h4>
-                <p className="text-slate-400">ivo@turbopc.com</p>
+                <p className="text-slate-400">joe.daminew@gmail.com</p>
               </div>
             </div>
 
@@ -45,42 +75,82 @@ const Contact = () => {
             </div>
           </div>
 
-          <form className="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-xl">
-            <div className="space-y-6">
-              
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">Name</label>
-                <input 
-                  type="text" 
-                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
-                  placeholder="Your Name"
-                />
+          <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-xl">
+            
+            {isSubmitted ? (
+              <div className="text-center py-12">
+                <div className="flex justify-center mb-4">
+                  <CheckCircle className="w-16 h-16 text-green-500" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                <p className="text-slate-400">
+                  Thanks for reaching out. I'll get back to you via email shortly.
+                </p>
+                <button 
+                  onClick={() => setIsSubmitted(false)}
+                  className="mt-6 text-blue-400 hover:text-blue-300 font-medium"
+                >
+                  Send another message
+                </button>
               </div>
+            ) : (
+              <form 
+                name="contact" 
+                method="POST" 
+                data-netlify="true" 
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
 
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">Email</label>
-                <input 
-                  type="email" 
-                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
-                  placeholder="you@email.com"
-                />
-              </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-300 mb-2">Name</label>
+                  <input 
+                    type="text" 
+                    name="name"
+                    required
+                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                    placeholder="Your Name"
+                  />
+                </div>
 
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">Message</label>
-                <textarea 
-                  rows={4}
-                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
-                  placeholder="I need a gaming PC for around €1000..."
-                ></textarea>
-              </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                  <input 
+                    type="email" 
+                    name="email"
+                    required
+                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                    placeholder="your@email.com"
+                  />
+                </div>
 
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2">
-                Send Message <Send size={18} />
-              </button>
+                <div>
+                  <label className="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                  <textarea 
+                    name="message"
+                    required
+                    rows={4}
+                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                    placeholder="I need a gaming PC for around €1000..."
+                  ></textarea>
+                </div>
 
-            </div>
-          </form>
+                <button 
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed text-white font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2"
+                >
+                  {isSubmitting ? (
+                    <>Sending... <Loader2 className="animate-spin" size={18} /></>
+                  ) : (
+                    <>Send Message <Send size={18} /></>
+                  )}
+                </button>
+              </form>
+            )}
+
+          </div>
 
         </div>
       </div>
