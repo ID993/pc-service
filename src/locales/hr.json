@@ -1,0 +1,46 @@
+{
+  "navbar": {
+    "services": "Usluge",
+    "about": "O nama",
+    "contact": "Kontakt",
+    "quote_button": "Zatraži Ponudu"
+  },
+  "hero": {
+    "title_start": "PC Računala složena za",
+    "title_highlight": "Performanse",
+    "subtitle": "Vrhunska custom računala, popravci i održavanje u Splitu. Složeno od inženjera, za entuzijaste.",
+    "cta_primary": "Započni Slaganje",
+    "cta_secondary": "Pogledaj Usluge"
+  },
+  "services": {
+    "title": "Naše Usluge",
+    "build_title": "Slaganje Računala",
+    "build_desc": "Profesionalno sastavljanje vaših komponenti uz vrhunski cable management i testiranje.",
+    "repair_title": "Dijagnostika i Popravci",
+    "repair_desc": "Otklanjanje hardverskih problema, zamjena neispravnih dijelova i optimizacija sustava.",
+    "clean_title": "Dubinsko Čišćenje",
+    "clean_desc": "Kompletno uklanjanje prašine, zamjena termalne paste i optimizacija protoka zraka."
+  },
+  "about": {
+    "title": "O Meni",
+    "desc": "Ja sam softverski inženjer i hardverski entuzijast iz Splita. Svakom PC-u pristupam kao da je moj vlastiti. Kvaliteta i urednost kablova su zajamčeni.",
+    "stat_experience": "Godina Iskustva",
+    "stat_builds": "Složenih PC-a",
+    "stat_clients": "Zadovoljnih Klijenata"
+  },
+  "contact": {
+    "title": "Kontaktirajte Nas",
+    "subtitle": "Spremni za novi PC ili trebate popravak? Pošaljite poruku.",
+    "info_title": "Informacije",
+    "area_title": "Područje Usluge",
+    "area_desc": "Split i okolica",
+    "form_name": "Ime",
+    "form_email": "Email",
+    "form_message": "Poruka",
+    "btn_send": "Pošalji Poruku",
+    "btn_sending": "Šaljem...",
+    "success_title": "Poruka Poslana!",
+    "success_desc": "Hvala na javljanju. Odgovorit ću vam na email u najkraćem roku.",
+    "btn_again": "Pošalji novu poruku"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "navbar": {
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "quote_button": "Contact Me"
+  },
+  "hero": {
+    "title_start": "Custom PCs built for",
+    "title_highlight": "Performance",
+    "subtitle": "Premium custom builds, repairs, and maintenance in Split. Built by an engineer, for enthusiasts.",
+    "cta_primary": "Start Your Build",
+    "cta_secondary": "View Services"
+  },
+  "services": {
+    "title": "Our Services",
+    "build_title": "Custom Assembly",
+    "build_desc": "Professional assembly of your components with premium cable management and rigorous testing.",
+    "repair_title": "Diagnostics & Repairs",
+    "repair_desc": "Troubleshooting hardware issues, replacing faulty parts, and system optimization.",
+    "clean_title": "Deep Cleaning",
+    "clean_desc": "Complete dust removal, thermal paste replacement, and airflow optimization."
+  },
+  "about": {
+    "title": "About Me",
+    "desc": "I am a software engineer and hardware enthusiast based in Split. I treat every PC build as if it were my own personal machine. Quality and cable management are guaranteed.",
+    "stat_experience": "Years Experience",
+    "stat_builds": "Builds Completed",
+    "stat_clients": "Happy Clients"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to build your new PC or need a fix? Send me a message.",
+    "info_title": "Contact Information",
+    "area_title": "Service Area",
+    "area_desc": "Split, Croatia & Surrounding Areas",
+    "form_name": "Name",
+    "form_email": "Email",
+    "form_message": "Message",
+    "btn_send": "Send Message",
+    "btn_sending": "Sending...",
+    "success_title": "Message Sent!",
+    "success_desc": "Thanks for reaching out. I'll get back to you via email shortly.",
+    "btn_again": "Send another message"
+  }
+}
